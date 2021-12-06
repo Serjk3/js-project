@@ -1,0 +1,52 @@
+.popup {
+  border: 3px solid $border;
+  border-radius: 25px;
+  padding: 45px 60px;
+  width: 580px;
+  background-color: $white;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  &-header {
+    text-transform: capitalize;
+    color: $header;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  &-description {
+    color: $blue;
+    text-align: center;
+    margin-bottom: 75px;
+  }
+  &-btn {
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: $white;
+    cursor: pointer;
+    border-radius: 35px;
+    background-color: $header;
+    padding: 15px 50px;
+    box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.5);
+    transition: all 0.2s ease-out;
+    &:hover {
+      color: $header;
+      background-color: $white;
+    }
+  }
+  &-point {
+    text-align: center;
+    animation: pulse 1.5s ease-out infinite;
+  }
+}
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(0.75);
+  }
+  40%,
+  60% {
+    transform: scale(1.35);
+  }
+}

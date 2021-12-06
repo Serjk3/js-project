@@ -1,0 +1,25 @@
+{
+  "name": "js-project",
+  "version": "1.0.0",
+  "description": "",
+  "source": "src/index.html",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Serjk3/js-project.git"
+  },
+  "author": "Serjk3",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Serjk3/js-project/issues"
+  },
+  "homepage": "https://github.com/Serjk3/js-project#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.0.1",
+    "parcel": "^2.0.1",
+    "sass": "^1.44.0"
+  }
+}

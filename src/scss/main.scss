@@ -1,0 +1,57 @@
+html {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-size: 1rem;
+  scroll-behavior: smooth;
+  background: linear-gradient(#525468, #2d2f3c);
+}
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+  padding: 0 15px;
+  position: relative;
+  z-index: 1;
+}
+
+section {
+  background: linear-gradient(#525468, #2d2f3c);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+h2 {
+  font-size: 1.875rem;
+  font-weight: 500;
+}
+h3 {
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+p {
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+i {
+  font-size: 2rem;
+  color: $yellow;
+  font-weight: 700;
+  transition: all 0.2s ease-out;
+}
+
+.favorites {
+  //   font-size: 2rem;
+  font-weight: bold;
+  color: $header;
+}
+
+.active {
+  display: block;
+}

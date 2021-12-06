@@ -1,0 +1,144 @@
+.node {
+  display: none;
+  background: $bg-content;
+  &-header {
+    width: 580px;
+    background-color: $white;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  &-menu {
+    display: flex;
+    flex-direction: row;
+    &__item {
+      margin-right: 20px;
+      text-transform: capitalize;
+      position: relative;
+      transition: all 0.2s ease-out;
+      & a {
+        color: $blue;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: $header;
+        opacity: 0;
+        transition: all 0.2s ease-out;
+      }
+      &:hover::after,
+      &:focus::after {
+        opacity: 1;
+      }
+      &::after {
+        transform: scale(0);
+        transform-origin: center;
+      }
+      &:hover::after,
+      &:focus::after {
+        transform: scale(1);
+      }
+      &:active::after {
+        background-color: $header;
+      }
+    }
+  }
+  &-content {
+    width: 580px;
+    background-color: $white;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  &-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    & h2 {
+      color: $header;
+      margin-bottom: 20px;
+    }
+    &__item {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 15px;
+      width: 100%;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      & label {
+        color: $blue;
+        margin-bottom: 5px;
+        cursor: pointer;
+      }
+      & input,
+      textarea,
+      select {
+        color: $placeholder;
+        padding: 5px;
+        border: 1px solid $input-border;
+        border-radius: 5px;
+        background: transparent;
+      }
+      & textarea {
+        resize: none;
+        height: 90px;
+      }
+      & select > option {
+        color: $header;
+      }
+    }
+    &__btn {
+      background-color: $blue;
+      color: $white;
+      text-transform: uppercase;
+      cursor: pointer;
+      padding: 10px 50px;
+      border-radius: 20px;
+      transition: all 0.2s ease-out;
+      &:hover {
+        box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+  &-post {
+    &__header {
+      padding: 20px;
+      background-color: $node-header;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__name {
+      color: $gray;
+    }
+    &__label {
+      padding: 10px 35px;
+      border-radius: 25px;
+      background-color: $white;
+      color: $header;
+      text-transform: capitalize;
+    }
+    &__body {
+      color: $bg-content;
+      padding: 20px;
+    }
+    &__footer {
+      background-color: $node-header;
+      padding: 15px 20px;
+    }
+    &__date {
+      color: $gray;
+    }
+  }
+  &-favorite {
+    display: none;
+  }
+}
