@@ -9,7 +9,7 @@
   </head>
 
   <body>
-    <section class="main">
+    <section class="main" id="header">
       <div class="container">
         <div class="popup">
           <h1 class="popup-header">welcome to notes!</h1>
@@ -17,15 +17,16 @@
             Create your own notes, add them to your favorites and don't miss
             anything!
           </p>
-          <button class="popup-btn">get started</button>
+          <button class="popup-btn js-header-start">get started</button>
         </div>
         <div class="popup-point"><i class="fas fa-hand-point-up"></i></div>
       </div>
     </section>
-    <section class="node">
+
+    <section class="node hide" id="node">
       <div class="container">
         <div class="node-header">
-          <ul class="node-menu">
+          <ul class="node-menu" id="navigation">
             <li class="node-menu__item" data-menu="0">
               <a href="#">posts</a>
             </li>
@@ -37,7 +38,7 @@
             </li>
           </ul>
         </div>
-        <div class="node-content" data-content="0">
+        <div class="node-content" data-content="0" id="posts">
           <div class="node-post">
             <div class="node-post__header">
               <h3 class="node-post__name">Title name here</h3>
@@ -56,7 +57,7 @@
             </div>
           </div>
         </div>
-        <div class="node-content active" data-content="1">
+        <div class="node-content active" data-content="1" id="create">
           <form action="" class="node-form">
             <h2>Create new post</h2>
             <div class="node-form__item">
@@ -86,7 +87,7 @@
             <button class="node-form__btn">create</button>
           </form>
         </div>
-        <div class="node-content" data-content="2">
+        <div class="node-content" data-content="2" id="favorite">
           <div class="node-favorite"></div>
         </div>
       </div>
