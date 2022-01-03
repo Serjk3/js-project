@@ -1,6 +1,7 @@
 import { Component } from "../core/components.js";
 import { Form } from "../core/form.js";
 import { Validators } from "../core/validators.js";
+import { API_SERVICE } from "../services/app.service.js";
 
 export class CreateComponents extends Component {
   constructor(id) {
@@ -27,7 +28,7 @@ async function submitHandler(event) {
       //Конвертируем все данные в один объект(title, fulltext)
       ...this.form.value(),
     };
-    //await apiService.createPost(formData);
+    await API_SERVICE.createPost(formData);
     this.form.clear();
     alert("Post created");
     // console.log("submit", formData);
