@@ -27,18 +27,20 @@
       <div class="container">
         <div class="node-header">
           <ul class="node-menu" id="navigation">
-            <li class="node-menu__item" data-menu="0">
-              <a href="#">posts</a>
+            <li class="node-menu__item">
+              <a class="tab" href="#" data-name="posts">posts</a>
             </li>
-            <li class="node-menu__item active" data-menu="1">
-              <a href="#">create</a>
+            <li class="node-menu__item">
+              <a class="tab active" href="#" data-name="create">create</a>
             </li>
-            <li class="node-menu__item" data-menu="2">
-              <a href="#">favorites<span class="favorites">*</span></a>
+            <li class="node-menu__item">
+              <a class="tab" href="#" data-name="favorites"
+                >favorites<span class="favorites">*</span></a
+              >
             </li>
           </ul>
         </div>
-        <div class="node-content" data-content="0" id="posts">
+        <div class="node-content hide" id="posts">
           <div class="node-post">
             <div class="node-post__header">
               <h3 class="node-post__name">Title name here</h3>
@@ -57,37 +59,35 @@
             </div>
           </div>
         </div>
-        <div class="node-content active" data-content="1" id="create">
-          <form action="" class="node-form">
-            <h2>Create new post</h2>
-            <div class="node-form__item">
-              <label for="title">Title</label>
-              <input
-                type="text"
-                name="title"
-                id="title"
-                placeholder="Enter your title"
-              />
-            </div>
-            <div class="node-form__item">
-              <label for="text">Text</label>
-              <textarea
-                name="text"
-                id="text"
-                placeholder="Enter your text"
-              ></textarea>
-            </div>
-            <div class="node-form__item">
-              <label for="select">Choose type of post</label>
-              <select name="select" id="select">
-                <option value="0" selected>Note</option>
-                <option value="1">News</option>
-              </select>
-            </div>
-            <button class="node-form__btn">create</button>
-          </form>
-        </div>
-        <div class="node-content" data-content="2" id="favorite">
+        <form action="#" class="node-content node-form" id="create">
+          <h2>Create new post</h2>
+          <div class="form-control node-form__item">
+            <label for="title">Title</label>
+            <input
+              type="text"
+              name="title"
+              id="title"
+              placeholder="Enter your title"
+            />
+          </div>
+          <div class="form-control node-form__item">
+            <label for="fulltext">Text</label>
+            <textarea
+              name="fulltext"
+              id="fulltext"
+              placeholder="Enter your text"
+            ></textarea>
+          </div>
+          <div class="form-control node-form__item">
+            <label for="type">Choose type of post</label>
+            <select name="type" id="type">
+              <option value="note" selected>Note</option>
+              <option value="news">News</option>
+            </select>
+          </div>
+          <button class="node-form__btn" type="submit">create</button>
+        </form>
+        <div class="node-content hide" id="favorites">
           <div class="node-favorite"></div>
         </div>
       </div>

@@ -53,5 +53,19 @@ i {
 }
 
 .hide {
-  display: none;
+  display: none !important;
+}
+
+.active {
+  border-bottom: 3px solid $header;
+}
+
+.invalid {
+  border: 2px solid $red !important;
+}
+
+.validation-error {
+  margin-top: 5px;
+  color: $red;
+  font-weight: 600;
 }
