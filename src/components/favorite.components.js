@@ -34,8 +34,8 @@ async function linkClickHandler(event) {
   }
 }
 
-function renderList(list = {}) {
-  if (!isEmpty(list)) {
+function renderList(list = []) {
+  if (list.length) {
     return `<ul class="center">
                <li>
                ${list
@@ -48,9 +48,9 @@ function renderList(list = {}) {
   }
 }
 
-function isEmpty(obj) {
-  for (var key in obj) {
-    return false;
-  }
-  return true;
-}
+// function isEmpty(obj) {
+//   for (var key in obj) {
+//     return false;
+//   }
+//   return true;
+// }
