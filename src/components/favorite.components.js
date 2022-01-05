@@ -22,7 +22,7 @@ export class FavoritesComponents extends Component {
 async function linkClickHandler(event) {
   event.preventDefault();
   if (event.target.classList.contains("js-link")) {
-    const POSTID = event.target.textContent;
+    const POSTID = event.target.dataset.id;
     this.$elem.innerHTML = "";
     const POST = await API_SERVICE.fetchPostById(POSTID);
     this.$elem.insertAdjacentHTML(
@@ -39,7 +39,10 @@ function renderList(list = []) {
     return `<ul class="center">
                <li>
                ${list
-                 .map((i) => `<a href="#" class="js-link">${i}</a>`)
+                 .map(
+                   (i) =>
+                     `<a href="#" class="js-link" data-id="${i.id}">${i.title}</a>`
+                 )
                  .join(" ")}
               </li>
             </ul>`;
@@ -47,10 +50,3 @@ function renderList(list = []) {
     return `<p class="center">There is nothin here yet</p>`;
   }
 }
-
-// function isEmpty(obj) {
-//   for (var key in obj) {
-//     return false;
-//   }
-//   return true;
-// }

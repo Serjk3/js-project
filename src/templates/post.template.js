@@ -4,11 +4,11 @@ export function renderPost(post, options = {}) {
       ? `<div class="node-post__label">news</div>`
       : `<div class="node-post__label">note</div>`;
 
-  const BUTTON = (JSON.parse(localStorage.getItem("favorites")) || []).includes(
-    post.id
-  )
+  const FAVORITES = JSON.parse(localStorage.getItem("favorites")) || [];
+  const CANDIDATE = FAVORITES.find((temp) => temp.id === post.id);
+  const BUTTON = CANDIDATE
     ? `<button class="node-post__btn" data-id="${post.id}">Delete from Favorite</button>`
-    : `<button class="node-post__btn" data-id="${post.id}">Add to Favorite</button>`;
+    : `<button class="node-post__btn" data-id="${post.id}" data-title="${post.title}">Add to Favorite</button>`;
   return `
               <div class="node-post">
                  <div class="node-post__header">

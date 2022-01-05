@@ -27,14 +27,16 @@ export class PostsComponents extends Component {
 function buttonHandler(event) {
   const $elem = event.target;
   const id = $elem.dataset.id;
+  const title = $elem.dataset.title;
   if (id) {
     let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
-    if (favorites.includes(id)) {
+    const CANDIDATE = favorites.find((p) => p.id === id);
+    if (CANDIDATE) {
       $elem.textContent = "Add to Favorite";
-      favorites = favorites.filter((fID) => fID !== id);
+      favorites = favorites.filter((p) => p.id !== id);
     } else {
       $elem.textContent = "Delete From Favorite";
-      favorites.push(id);
+      favorites.push({ id, title });
     }
     localStorage.setItem("favorites", JSON.stringify(favorites));
   }
