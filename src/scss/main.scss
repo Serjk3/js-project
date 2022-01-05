@@ -53,5 +53,32 @@ i {
 }
 
 .hide {
-  display: none;
+  display: none !important;
+}
+
+.active {
+  border-bottom: 3px solid $header;
+}
+
+.invalid {
+  border: 2px solid $red !important;
+}
+
+.validation-error {
+  margin-top: 5px;
+  color: $red;
+  font-weight: 600;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  color: $header;
+  font-size: 1.25rem;
+}
+
+.js-link {
+  display: block;
+  color: $header;
+  margin-bottom: 15px;
 }
